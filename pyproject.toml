@@ -1,0 +1,10 @@
+[project]
+name = "reco-micro"
+version = "0.1.0"
+description = "A lightweight Recommendation Engine API"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.129.0",
+    "fastapi-cli>=0.0.21",
+]
