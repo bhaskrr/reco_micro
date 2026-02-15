@@ -42,35 +42,51 @@ RecoMicro follows a **"Local-First, Cloud-Ready"** storage philosophy:
 * SQLite3 for zero-latency local development.
 * Uses **SQLAlchemy 2.0** (ORM).
 
-## Quick start
+## Quick Start
 
-1. Install Python >=3.13
-2. Create and activate a virtualenv:
-   ```sh
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Install project (editable):
-   ```sh
-   pip install -e .
-   ```
-4. Run the API:
-   ```sh
-   uvicorn src.main:app --reload --port 8000
-   ```
-5. Open http://127.0.0.1:8000/
+**RecoMicro** uses `uv` for ultra-fast dependency management. If you don't have it yet, [install uv first](https://github.com/astral-sh/uv).
+
+### 1. Setup Environment
+
+Clone the repository and sync the dependencies. `uv` will automatically create a virtual environment.
+
+```sh
+# Clone the repository
+git clone https://github.com/bhaskrr/reco_micro.git
+
+cd recomicro
+
+# Sync dependencies and create .venv
+uv sync
+```
+
+### 2. Run the API
+
+Use uv run to ensure you are executing the code within the project's virtual environment.
+
+```sh
+uv run uvicorn src.main:app --reload --port 8000
+```
+
+### 3. Explore
+
+* API Base: <http://127.0.0.1:8000/>
+* Interactive Docs: <http://127.0.0.1:8000/docs>
 
 ## Future Roadmap
 
-- Hybrid filtering support.
-- Built-in A/B testing hooks.
-- Real-time re-ranking and much more.
+* Hybrid filtering support.
+* Cold-start engine.
+* Built-in A/B testing hooks.
+* Real-time re-ranking and much more.
 
 ## Contributing
 
 We welcome contributions of all sizes! Whether you are fixing a typo or implementing a new ML algorithm, your help makes RecoMicro better.
 
 ### Choose Your Track
+
+Whether you're looking to sharpen your backend skills or dive deep into mathematical optimizations, we have a path for you. Pick a track below that matches your expertise and interests.
 
 |Area|Focus|Skills|
 |----|----|-----|
