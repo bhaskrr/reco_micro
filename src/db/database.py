@@ -10,3 +10,12 @@ SessionLocal = sessionmaker(autoflush=False, bind=engine)
 
 # Base class to create declarative objects(tables)
 Base = DeclarativeBase()
+
+
+def get_db():
+    "Depenency to get DB session in routes."
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
