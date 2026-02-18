@@ -9,7 +9,8 @@ engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(autoflush=False, bind=engine)
 
 # Base class to create declarative objects(tables)
-Base = DeclarativeBase()
+class Base(DeclarativeBase):
+    pass
 
 
 def get_db():
